@@ -6,12 +6,15 @@ Tables Arc-en-ciel et Attaque Compromis Temps/Mémoire
 
 ##Installation
 
-###Mac OS X "El Capitan"
-
-Install OpenSSL:
-```bash
-brew install openssl 
-```
+    ###Mac OS X
+    Install OpenSSL:
+    ```bash
+    brew install openssl 
+    ```
+ ```bash
+   make && ./INFO006_TP1_Caillet_Dilisio
+ ```
+    
 
 
 ##DONE

@@ -1,8 +1,7 @@
 #INFO006_TP1_Caillet-Dilisio
 
-
 Tables Arc-en-ciel et Attaque Compromis Temps/Mémoire
-Subject: 'http://www.lama.univ-savoie.fr/~lachaud/Cours/INFO006/Tests/doc/html/tp1.html'
+* Subject: 'http://www.lama.univ-savoie.fr/~lachaud/Cours/INFO006/Tests/doc/html/tp1.html'
 
 
 ##Installation
@@ -44,6 +43,6 @@ $openssl version -a
     
         printf("\n");
     }
-    ``
-     (see [main.cpp](main.cpp) for more details)
+    ```
+    (see [main.cpp](main.cpp) for more details)
     

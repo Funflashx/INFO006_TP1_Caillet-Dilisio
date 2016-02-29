@@ -9,11 +9,10 @@ Tables Arc-en-ciel et Attaque Compromis Temps/Mémoire
 ###Mac OS X "El Capitan"
 
 Install OpenSSL:
+```bash
+brew install openssl 
 ```
-$brew install openssl 
-$brew link --force openssl  
-$openssl version -a
-```
+
 
 ##DONE
 - [x] MD5 hash:

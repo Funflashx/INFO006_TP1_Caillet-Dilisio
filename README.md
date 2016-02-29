@@ -6,16 +6,9 @@ Tables Arc-en-ciel et Attaque Compromis Temps/Mémoire
 
 ##Installation
 
-    ###Mac OS X
-    Install OpenSSL:
-    ```bash
-    brew install openssl 
-    ```
  ```bash
    make && ./INFO006_TP1_Caillet_Dilisio
  ```
-    
-
 
 ##DONE
 - [x] MD5 hash:
@@ -48,3 +41,5 @@ Tables Arc-en-ciel et Attaque Compromis Temps/Mémoire
     ```
     (see [main.cpp](main.cpp) for more details)
     
+#Dependencies 
+- OpenSSL (1.0.2f)

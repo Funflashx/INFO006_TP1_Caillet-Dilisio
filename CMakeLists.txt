@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.3)
+project(INFO006_TP1_Caillet_Dilisio)
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+find_package(OpenSSL REQUIRED)
+if (OPENSSL_FOUND)
+    message( STATUS "OPENSSL found.")
+    INCLUDE_DIRECTORIES(${OPENSSL_INCLUDE_DIR})
+else (OPENSSL_FOUND)
+    message( STATUS "OPENSSL not found")
+endif (OPENSSL_FOUND)
+
+set(SOURCE_FILES main.cpp Contexte.cpp Contexte.h ArcEnCiel.cpp ArcEnCiel.h Hachage.h Hachage.cpp)
+add_executable(INFO006_TP1_Caillet_Dilisio ${SOURCE_FILES})
+target_link_libraries(INFO006_TP1_Caillet_Dilisio ${OPENSSL_LIBRARIES})

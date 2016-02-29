@@ -1,9 +1,9 @@
 #INFO006_TP1_Caillet-Dilisio
 
-```
+
 Tables Arc-en-ciel et Attaque Compromis Temps/Mémoire
 Subject: 'http://www.lama.univ-savoie.fr/~lachaud/Cours/INFO006/Tests/doc/html/tp1.html'
-```
+
 
 ##Installation
 
@@ -33,7 +33,7 @@ $openssl version -a
         MD5(pPlain, nPlainLen, pHash);      //use <openssl/md5.h> lib
     }
     ```
-    (see [Contexte, Hachage] for more details)
+    (see [Contexte.cpp](Contexte.cpp), [Contexte.h](Contexte.h), [Hachage.cpp](Hachage.cpp), [Hachage.h](Hachage.h) for more details)
     
 - [x] Display MD5 hash:
     ```
@@ -45,5 +45,5 @@ $openssl version -a
         printf("\n");
     }
     ``
-    
+     (see [main.cpp](main.cpp) for more details)
     

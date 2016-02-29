@@ -17,7 +17,7 @@ $openssl version -a
 
 ##DONE
 - [x] MD5 hash:
-    ```
+    ```cpp
     //@param c : plain text "hello" 
     //@return d : hash in hexadecimal (Condense => char[16]) 
     void Contexte::h( std::string c, Condense & d ){
@@ -35,7 +35,7 @@ $openssl version -a
     (see [Contexte.cpp](Contexte.cpp), [Contexte.h](Contexte.h), [Hachage.cpp](Hachage.cpp), [Hachage.h](Hachage.h) for more details)
     
 - [x] Display MD5 hash:
-    ```
+    ```cpp
     void hex(unsigned char * p, int nb){
         for (int i = 0; i < nb ; ++i) {
             printf("%02x",p[i]); //MD5 hash value is expressed as a hex number

@@ -38,3 +38,4 @@ uint64 Contexte::i2i( int t, uint64 idx ){
 uint64 Contexte::randIndex(){
         return rand() % get_N();
 }
+

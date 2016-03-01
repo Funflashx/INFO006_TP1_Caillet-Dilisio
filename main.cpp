@@ -10,10 +10,16 @@ void hex(unsigned char * p, int nb);
 
 int main() {
     Contexte c;
-    std::string a = "hello";
+
+
+
+    std::string clair;
+    c.i2c(14949318,clair);
+    printf("Clair = %s \n", clair.c_str());
     Condense buff;
-    c.h(a , buff);
-    hex(buff,16);
+    c.h(clair , buff);
+    hex(buff, 16);
+
 
     return 0;
 }

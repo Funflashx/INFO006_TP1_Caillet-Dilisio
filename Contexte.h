@@ -19,12 +19,12 @@ typedef unsigned long long uint64;
 
 class Contexte {
 private:
-    uint64 _N = pow(_nb_lettres,_mot_taille_min);            // nombre de mots
+    const static int _nb_lettres = 36;      // nombre de lettres possibles pour un caractère
     int _mot_taille_min=5;  // nombre de lettres min d'un mot
     int _mot_taille_max=5;  // nombre de lettres max d'un mot
+    uint64 _N = pow(_nb_lettres,_mot_taille_min);            // nombre de mots
     uint64 _N_taille[5];   // tableau, nombre de mots d'une taille donnée
-    const static int _nb_lettres = 26;      // nombre de lettres possibles pour un caractère
-    char _lettres[_nb_lettres] =  {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};;      // tableau des lettres de taille _nb_lettres
+    char alphabet[_nb_lettres] =  {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};      // tableau des lettres de taille _nb_lettres
 
 
     // fonction de hachage
@@ -44,6 +44,25 @@ public:
 
     // Retourne un indice aléatoire valide.
     uint64 randIndex();
+
+    //GETTERS
+    uint64 get_N(){
+        return this->_N;
+    }
+
+    int getMotTailleMin() {
+        return this->_mot_taille_min;
+    }
+
+    char* getAlphabet() {
+        return this->alphabet;
+    }
+
+    int getNbLettres() {
+        return this->_nb_lettres;
+    }
+
+
 };
 
 

@@ -10,16 +10,19 @@ void hex(unsigned char * p, int nb);
 
 int main() {
     Contexte c;
-
-
-
     std::string clair;
-    c.i2c(14949318,clair);
+    uint64 index = 14949318;
+
+    c.i2c(index,clair);
     printf("Clair = %s \n", clair.c_str());
     Condense buff;
+    printf("Hash: ");
     c.h(clair , buff);
     hex(buff, 16);
+    printf("h2i(1) -> %d\n",c.h2i(1,buff));
 
+    printf("\ni2i(1, 14949318) => %d\n", c.i2i(1,index));
+    printf("nombre de mot = %d\nIndex Random = %d\n ", c.get_N(), c.randIndex());
 
     return 0;
 }

@@ -41,7 +41,9 @@ Tables Arc-en-ciel et Attaque Compromis Temps/Mémoire
     ```
     (see [main.cpp](main.cpp) for more details)
     
-- [x] Index to plain text (i2c) (see [context.cpp](context.cpp) for more details)
+- [x] Index to plain text (i2c) 
+- [x] Index to Index (i2i) 
+- [x] Index Random (see [context.cpp](context.cpp) for more details)
     
 #Dependencies 
 - OpenSSL (1.0.2f)

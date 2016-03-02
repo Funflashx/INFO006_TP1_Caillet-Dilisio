@@ -44,6 +44,8 @@ Tables Arc-en-ciel et Attaque Compromis Temps/Mémoire
 - [x] Index to plain text (i2c) 
 - [x] Index to Index (i2i) 
 - [x] Index Random (see [context.cpp](context.cpp) for more details)
+- [x] Create Rainbow Table 
+- [x] Sort rainbow table by idxT
     
 #Dependencies 
 - OpenSSL (1.0.2f)

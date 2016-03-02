@@ -26,10 +26,11 @@ int main() {
     printf("\ni2i(1, 14949318) => %d\n", c.i2i(1,index));
     printf("nombre de mot = %d\nIndex Random = %d\n ", c.get_N(), c.randIndex());*/
 
-    arcEnCiel.creer(c,0,100, 5000);
-    arcEnCiel.displayChaine();
-    arcEnCiel.trier();
-    printf("\n\n");
+     //arcEnCiel.creer(c,0,100, 5000);
+   // arcEnCiel.displayChaine();
+   // arcEnCiel.trier();
+   // printf("\n\n");
+    arcEnCiel.load("test1.txt");
     arcEnCiel.displayChaine();
 
 

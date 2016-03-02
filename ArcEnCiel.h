@@ -4,6 +4,9 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <string>
+#include <fstream>
+#include <sstream>
+#include <iostream>
 #include <vector>
 #include <algorithm>
 #include "Contexte.h"
@@ -13,6 +16,9 @@
 
 #ifndef INFO006_TP1_CAILLET_DILISIO_ARCENCIEL_H
 #define INFO006_TP1_CAILLET_DILISIO_ARCENCIEL_H
+
+using namespace std;
+using std::fstream;
 
 struct Chaine {
     uint64 idx1;    // premier indice de la chaine

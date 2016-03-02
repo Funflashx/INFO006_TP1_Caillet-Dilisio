@@ -5,30 +5,21 @@
 #include "ArcEnCiel.h"
 
 void ArcEnCiel::creer( Contexte ctxt, int num, int M, int T ){
-    Chaine c[this->_M];
+    _X.resize( M );
 
     this->_numero = num;
     this->_M = M;
     this->_T = T;
-    this->_X = c;
 
     uint64 indexTemp;
 
     for (int i = 0; i < M; ++i) {
         this->_X[i].idx1 = ctxt.randIndex();
-        //printf("index = %d \n", i);
-        printf("prems = %lld \n", this->_X[i].idx1);
         indexTemp = this->_X[i].idx1;
-      //  printf("index = %d \n", i);
         for (int j = 1; j < T-1; ++j) {
-            //printf("j= %d ----", j);
-            //printf("before= %d ---",indexTemp);
             indexTemp = ctxt.i2i(j,indexTemp);
-            //printf("indexTemp= %d\n",indexTemp);
-
         }
         this->_X[i].idxT = ctxt.i2i(T-1,indexTemp);
-        printf("last= %d\n",this->_X[i].idxT );
     }
 }
 
@@ -39,3 +30,12 @@ void ArcEnCiel::displayChaine() {
     }
 
 }
+
+bool sort_chaine(Chaine const& c1,Chaine const& c2){
+    return c1.idxT < c2.idxT;
+}
+
+void ArcEnCiel::trier(){
+    std::sort(this->_X.begin(), this->_X.end(), &sort_chaine);
+}
+

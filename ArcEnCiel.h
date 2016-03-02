@@ -3,7 +3,9 @@
 //
 #include <stdint.h>
 #include <stdio.h>
-#include <string.h>
+#include <string>
+#include <vector>
+#include <algorithm>
 #include "Contexte.h"
 #ifdef MACOSX
 #include <sys/types.h>
@@ -21,7 +23,7 @@ private:
     int _numero;   // numero de la table (ici 0, mais voir "Moult tables")
     int _M;        // nombre de chaines dans la table
     int _T;        // taille de chaque chaine
-    Chaine* _X;     // la table elle-meme
+    std::vector<Chaine> _X;     // la table elle-meme
 public:
     // Creer les M chaînes de taille T, dans le contexte ctxt
     void creer( Contexte ctxt, int num, int M, int T );

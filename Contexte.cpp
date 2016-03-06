@@ -3,22 +3,22 @@
 //
 
 #include "Contexte.h"
+#include <ctime>
 
 Contexte::Contexte() {
 
 }
 
-void Contexte::i2c( uint64 idx, std::string & c ){
+void Contexte::i2c( uint64 idx, string & c ){
+        c = "";
         for (int i = 0 ; i < getMotTailleMin() ; ++i) {
                 c.push_back(getAlphabet()[idx % getNbLettres()]);
-                idx = idx / getNbLettres();
+                idx /= getNbLettres();
         }
 }
 
-// fonction de hachage
-// In: Clair c ----> Out: Empreinte
-void Contexte::h( std::string c, Condense & d ){
-        HashMD5((unsigned char *) c.c_str(), c.size(), d);
+void Contexte::h( string c, Condense & d ){
+        HashMD5((unsigned char *) c.c_str(), (int) c.size(), d);
 }
 
 uint64 Contexte::h2i( uint64 t, Condense & d ){
@@ -26,8 +26,8 @@ uint64 Contexte::h2i( uint64 t, Condense & d ){
         return  ((*ptr)+t) % get_N(); //retourne l'index
 }
 
-uint64 Contexte::i2i( int t, uint64 idx ){
-        std::string c;
+uint64 Contexte::i2i( uint64 t, uint64 idx ){
+        string c;
         Condense buff;
 
         i2c(idx,c);
@@ -36,6 +36,9 @@ uint64 Contexte::i2i( int t, uint64 idx ){
 }
 
 uint64 Contexte::randIndex(){
-        return rand() % get_N();
+        unsigned long n1 = (unsigned long) random();
+        unsigned long n2 = (unsigned long) random();
+        return  ( (uint64) n2 )
+                + ( ( (uint64) n1 ) << 32 ) % get_N();
 }
 

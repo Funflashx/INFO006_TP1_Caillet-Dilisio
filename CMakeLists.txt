@@ -10,6 +10,6 @@ else (OPENSSL_FOUND)
     message( STATUS "OPENSSL not found")
 endif (OPENSSL_FOUND)
 
-set(SOURCE_FILES main.cpp Contexte.cpp Contexte.h ArcEnCiel.cpp ArcEnCiel.h Hachage.h Hachage.cpp)
+set(SOURCE_FILES main.cpp Contexte.cpp Contexte.h ArcEnCiel.cpp ArcEnCiel.h Hachage.h Hachage.cpp Cracker.cpp Cracker.h)
 add_executable(INFO006_TP1_Caillet_Dilisio ${SOURCE_FILES})
 target_link_libraries(INFO006_TP1_Caillet_Dilisio ${OPENSSL_LIBRARIES})

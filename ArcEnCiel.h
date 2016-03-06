@@ -1,6 +1,7 @@
 //
 // Created by François Caillet on 29/02/2016.
 //
+
 #include <stdint.h>
 #include <stdio.h>
 #include <string>
@@ -24,26 +25,52 @@ struct Chaine {
     uint64 idx1;    // premier indice de la chaine
     uint64 idxT;    // dernier indice de la chaine
 };
-class ArcEnCiel {
-private:
-    int _numero;   // numero de la table (ici 0, mais voir "Moult tables")
-    int _M;        // nombre de chaines dans la table
-    int _T;        // taille de chaque chaine
-    std::vector<Chaine> _X;     // la table elle-meme
-public:
-    // Creer les M chaînes de taille T, dans le contexte ctxt
-    void creer( Contexte ctxt, int num, int M, int T );
-    // Tri _X suivant idxT.
-    void trier();
-    // Sauvegarde la table sur disque.
-    void save( std::string name );
-    // Charge en mémoire la table à partir du disque.
-    void load( std::string name );
-    // Recherche dichotomique dans la table
-    // ( p et q sont le premier/dernier trouvé )
-    bool recherche( uint64 idx, int & p, int & q );
 
+
+class ArcEnCiel {
+
+public:
+    int _numero;                // numero de la table (ici 0, mais voir "Moult tables")
+    int _M;                     // nombre de chaines dans la table
+    int _T;                     // taille de chaque chaine
+    std::vector<Chaine> _X;     // la table elle-meme
+
+    /**
+     *  Creer les M chaînes de taille T, dans le contexte ctxt
+     */
+    void create(Contexte ctxt, int num, int M, int T);
+
+    /**
+     *  Tri _X suivant les idxT.
+     */
+    void sort_by_idTx();
+
+    /**
+     *  Sauvegarde la table sur disque.
+     *  @param name : nom du fichier où stocker la table.
+     */
+    void save( std::string name );
+
+    /**
+     *  Charge la table du disque.
+     *  @param name : nom du fichier à charger.
+     */
+    void load( std::string name );
+
+    /**
+     *  Recherche dichotomique dans la table
+     *  SOURCE: Dichotomie — Wikipédia (https://fr.wikipedia.org/wiki/Dichotomie)
+     *  @param p : premier trouvé
+     *  @param q : dernier trouvé
+     *  @return trouvé ou !trouvé
+     */
+    bool find(uint64 idx, Chaine *&p, Chaine *&q);
+
+    /**
+     *  Affiche la table
+     */
     void displayChaine();
+
 };
 
 

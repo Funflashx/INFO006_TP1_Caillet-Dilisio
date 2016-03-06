@@ -13,7 +13,14 @@
 #ifndef INFO006_TP1_CAILLET_DILISIO_HACHAGE_H
 #define INFO006_TP1_CAILLET_DILISIO_HACHAGE_H
 
+/**
+ * @param pPlain : plain text
+ * @param nPlainLen : strlen
+ * @return pointers to the hash value
+*/
 void HashMD5(unsigned char* pPlain, int nPlainLen, unsigned char* pHash);
+
+//Non-implémenté
 void HashSHA1(unsigned char* pPlain, int nPlainLen, unsigned char* pHash);
 void setup_des_key(unsigned char key_56[], des_key_schedule &ks);
 void HashLM(unsigned char* pPlain, int nPlainLen, unsigned char* pHash);

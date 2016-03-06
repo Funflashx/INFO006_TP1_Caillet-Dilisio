@@ -13,6 +13,7 @@ Tables Arc-en-ciel et Attaque Compromis Temps/Mémoire
 ##DONE
 - [x] MD5 hash
 - [x] Display MD5 hash   
+- [x] Hash to index (h2i)
 - [x] Index to plain text (i2c) 
 - [x] Index to Index (i2i) 
 - [x] Index Random 
@@ -36,7 +37,7 @@ Tables Arc-en-ciel et Attaque Compromis Temps/Mémoire
     - commenter dans le main.cpp les lignes de : create, save, sort; et décommenter load 
     - il load le fichier (big_dico.txt) 
 - La fonction displayChaine permet d'afficher la table ( ex:  ... 1333750206 -i2i(1)-> ... -i2i(999)-> 11879996 ...)
-- Le premier bloc commenté dans le main.cpp permet de tester les fonctions : h, i2c, i2i. 
+- Le premier bloc commenté dans le main.cpp permet de tester les fonctions : h, h2i, i2c, i2i. 
     - nous trouvons les mêmes résultats que le dernier exemple fournit :
     ```
     taille   = 5

@@ -35,7 +35,7 @@ int main() {
     arcEnCiel.create(c, 0, 100000, 1000);
     //arcEnCiel.displayChaine();
     arcEnCiel.sort_by_idTx();
-    arcEnCiel.displayChaine();
+    //arcEnCiel.displayChaine();
     arcEnCiel.save("big_dico.txt");
     Cracker* cracker = new Cracker();
     int i = 0;

@@ -24,6 +24,12 @@ Tables Arc-en-ciel et Attaque Compromis Temps/Mémoire
 - [x] Load from saved file
 - [x] Rainbow table binary search
 - [x] Cracker 
+    - [x] a-z
+    - [] a-zA-Z
+- [] Fonction de calcul de la probabilité de succès (implementée mais non-fonctionnelle)
+- [] Moult tables 
+- [] Crackage multiple
+- [] Dictionnaires
 
 ##Utilisation 
 - Créer une nouvelle table avec M = 100000 et T = 1000 : 
@@ -49,7 +55,13 @@ Tables Arc-en-ciel et Attaque Compromis Temps/Mémoire
     ```
     - Note: décommenter les chiffres dans l'alphabet et modifier "_nb_lettres" à 36
     
-
+##Echecs
+```
+# A-Z 5 lettres
+`
+# a-zA-Z 5 lettres
+c2dd8be8874b1200530e72bcb5d416da
+``
     
 #Dependencies 
 - OpenSSL (1.0.2f)

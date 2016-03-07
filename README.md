@@ -57,11 +57,9 @@ Tables Arc-en-ciel et Attaque Compromis Temps/Mémoire
     
 ##Echecs
 ```
-# A-Z 5 lettres
-`
 # a-zA-Z 5 lettres
 c2dd8be8874b1200530e72bcb5d416da
-``
+```
     
 #Dependencies 
 - OpenSSL (1.0.2f)
